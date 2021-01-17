@@ -18,7 +18,7 @@ A discord bot that uses a neural network to predict what you will choose given t
 - scikit-learn
 - discord.py
 
-The bottom three dependencies can be installed using the pip command that comes with Python 3.
+The dependencies below Python 3 can be installed using the pip command that comes with Python 3.
 
 ### Installing the bot
 
