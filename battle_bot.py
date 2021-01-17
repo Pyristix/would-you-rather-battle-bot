@@ -7,11 +7,6 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-#Required packages:
-#discord.py
-#pandas
-#sklearn
-
 random.seed()
 client = discord.Client()
 
@@ -61,6 +56,10 @@ async def predict_choice(message, current_battle):
     data_files = os.listdir("./")
     data_files.remove(__file__)
     
+    for file in data_files:
+        if not (file[-9:] == "_data.csv"):
+            data_files.remove(file)
+    
     dataframe = pd.DataFrame()
 
     #Adds the user's battle data to the dataframe
@@ -78,8 +77,8 @@ async def predict_choice(message, current_battle):
             try:
                 temp_dataframe = pd.read_csv(file_name, header = None)
                 dataframe = dataframe.append(temp_dataframe, ignore_index = True)
-            except:
-                print("Notice: Current user file is empty")
+            except pd.errors.EmptyDataError:
+                print("Notice: " + file_name + " is empty")
     
     if dataframe.size < 50:
         await message.channel.send("There is not enough data to predict your decision")
@@ -123,5 +122,6 @@ async def append_result(message, choice):
 def reset_data(username):
     os.remove(username + "_data.csv")
     
-
+    
+    
 client.run("############") #Insert Discord bot token inside the quotation marks
