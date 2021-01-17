@@ -29,7 +29,7 @@ git clone https://github.com/Pyristix/would-you-rather-battle-bot.git
 
 ### Configuring the bot
 
-After cloning the project and installing all dependencies, you need to add your Discord API bot token to the bottom of the script file in the indicated area.
+After cloning the project and installing all dependencies, you need to add your Discord API bot token to the bottom of the battle_bot.py file in the indicated area.
 
 ### Starting the bot
 
