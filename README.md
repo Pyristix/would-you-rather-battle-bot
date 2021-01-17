@@ -4,9 +4,12 @@ A discord bot that uses a neural network to predict what you will choose given t
 
 ## Commands
 
-- $bb$start					- Starts up a new battle if one is not already in progress. If one is already in progress, this command brings up the current battle details. Also gives a prediction about what you will choose based on past data.
-- $bb$select \[Decision\]	- Used for selecting one of the options by replacing \[Decision\] with the option you choose, e.g. $bb$select 2 horses
-- $bb$reset					- Clears previous selection data for the user who calls the command
+- $bb$start
+  - Starts up a new battle if one is not already in progress. If one is already in progress, this command brings up the current battle details. Also gives a prediction about what you will choose based on past data.
+- $bb$select \[Decision\]
+  - Used for selecting one of the options by replacing \[Decision\] with the option you choose, e.g. $bb$select 2 horses
+- $bb$reset
+  - Clears previous selection data for the user who calls the command
 
 ## Required installations
 
