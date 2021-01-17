@@ -120,7 +120,10 @@ async def append_result(message, choice):
     
 #Clears previous battle data for a specific user
 def reset_data(username):
-    os.remove(username + "_data.csv")
+    try:
+        os.remove(username + "_data.csv")
+    except:
+        print(username + " attempted to reset but their data file is empty")
     
     
     
