@@ -1,6 +1,6 @@
 # Would You Rather Battle Bot
 
-A discord bot that uses a neural network to predict what you will choose given two options regarding who you would rather battle.
+A Discord bot that uses a neural network to predict what you will choose given two options regarding who you would rather battle.
 
 ## Commands
 
